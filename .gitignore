@@ -1,0 +1,21 @@
+# 環境變數（絕對不能 commit！）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# 測試
+.pytest_cache/
+htmlcov/
+
+# 資料庫遷移（視情況）
+# alembic/versions/
