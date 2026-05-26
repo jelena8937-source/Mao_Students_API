@@ -200,6 +200,7 @@ class BookingCreate(BaseModel):
     preferred_time: Optional[str] = None   # 希望聯繫時段
     message: Optional[str] = None          # 備註說明
     agreed_to_terms: bool                  # 同意服務條款（必須為 True）
+    estimated_amount: Optional[float] = None
 
     @field_validator("agreed_to_terms")
     @classmethod
@@ -268,7 +269,14 @@ class BookingStatusUpdate(BaseModel):
 # Order Schemas
 # 來源：Account.vue 服務紀錄 + Admin.vue 訂單追蹤
 # ========================================
-
+class OrderCreate(BaseModel):
+    """建立訂單時傳入的參數"""
+    service_type: str        # plan_a / plan_b
+    pet_id: Optional[int] = None
+    booking_id: Optional[int] = None
+    self_cremation: bool = False
+    notes: Optional[str] = None
+    
 class OrderResponse(BaseModel):
     """
     訂單回應（使用者視角）

@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings
 from typing import List
+from urllib.parse import quote_plus
 
 
 class Settings(BaseSettings):
@@ -8,7 +9,7 @@ class Settings(BaseSettings):
     DB_PORT: int = 3306
     DB_USER: str = "root"
     DB_PASSWORD: str = ""
-    DB_NAME: str = "maosmain"
+    DB_NAME: str = "mao_students_db"
 
     # JWT
     SECRET_KEY: str = "change-this-in-production"
@@ -29,7 +30,7 @@ class Settings(BaseSettings):
     @property
     def DATABASE_URL(self) -> str:
         return (
-            f"mysql+pymysql://{self.DB_USER}:{self.DB_PASSWORD}"
+            f"mysql+pymysql://{self.DB_USER}:{quote_plus(self.DB_PASSWORD)}"  # ← quote_plus 在這
             f"@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
         )
 

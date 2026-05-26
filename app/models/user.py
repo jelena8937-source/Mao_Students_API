@@ -11,7 +11,7 @@
 
 from sqlalchemy import (
     Column, Integer, String, Boolean, Text,
-    DateTime, ForeignKey, Enum, Numeric, Date
+    DateTime, ForeignKey, Enum, Numeric, Date, JSON  # 💡 引入 JSON 欄位支援
 )
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
@@ -227,7 +227,9 @@ class Order(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     pet_id = Column(Integer, ForeignKey("pets.id"), nullable=True,
                     comment="關聯毛孩（若已建立寵物資料）")
-    booking_id = Column(Integer, ForeignKey("bookings.id"), nullable=True,
+    
+    # 💡 加上 unique=True 確保一筆預約諮詢只會對應到一張實體服務訂單，防止邏輯重複
+    booking_id = Column(Integer, ForeignKey("bookings.id"), unique=True, nullable=True,
                         comment="來源預約單")
 
     # --- Account.vue 服務紀錄顯示 ---
@@ -322,8 +324,10 @@ class RitualRegistration(Base):
 
     will_attend = Column(Boolean, default=True,
                             comment="是否親自出席（False = 委託代參）")
-    pet_names = Column(String(200), nullable=True,
-                        comment="本次為哪些毛孩迴向（可多隻，逗號分隔）")
+    
+    # 💡 升級為 JSON 欄位：未來管理後台可以極度精準地用 [1, 2] 陣列關聯多隻 Pet 的實體 ID
+    # 如果前端傳字串過來，後端寫入前做個 .split(",") 轉成 list 存進去即可，長遠看彈性大非常多！
+    pet_ids = Column(JSON, nullable=True, comment="本次為哪些毛孩迴向（存入寵物 ID 陣列，如 [1, 3]）")
     notes = Column(Text, nullable=True, comment="備註")
 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
