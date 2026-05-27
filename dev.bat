@@ -15,6 +15,7 @@ echo 🚀 FastAPI 服務正在啟動，請稍候...
 echo 💡 提示：開啟瀏覽器前往 http://127.0.0.1:8000/docs 查看 API 文件
 echo --------------------------------------------------
 
+set PYTHONIOENCODING=utf-8
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
 
 pause

@@ -4,13 +4,14 @@ from sqlalchemy.orm import Session
 from typing import List
 from app.core.database import get_db
 from app.core.security import get_current_user, get_current_admin
-from app.models.user import Order, OrderStatus, ServiceType  # 引入 ServiceType
+from app.models.user import Order, OrderStatus, ServiceType, Pet  # 引入 ServiceType 和 Pet
 from app.schemas.schemas import (
     OrderCreate, OrderResponse,
-    OrderStatusUpdate, MessageResponse
+    OrderStatusUpdate, MessageResponse, PetResponse, PetUpdate, PetCreate
 )
 from datetime import datetime, timezone
 from decimal import Decimal
+import random
 
 router = APIRouter(tags=["🛍️ 方案與訂單"])
 
@@ -87,6 +88,69 @@ def get_my_orders(
     return db.query(Order).filter(
         Order.user_id == current_user.id
     ).order_by(Order.created_at.desc()).all()
+
+
+@router.get("/pets/my", response_model=List[PetResponse])
+def get_my_pets(
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    """取得我的所有毛孩資料"""
+    return db.query(Pet).filter(Pet.owner_id == current_user.id).all()
+
+
+@router.post("/pets", response_model=PetResponse, status_code=201)
+def create_my_pet(
+    data: PetCreate,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    """新增我的毛孩資料"""
+    # 產生唯一的 pet_id (格式：PET-MTX-XXXXXX)
+    while True:
+        candidate_id = f"PET-MTX-{random.randint(100000, 999999)}"
+        exists = db.query(Pet).filter(Pet.pet_id == candidate_id).first()
+        if not exists:
+            break
+
+    # 建立 Pet 實例
+    pet = Pet(
+        owner_id=current_user.id,
+        pet_id=candidate_id,
+        name=data.name,
+        pet_type=data.pet_type,
+        breed=data.breed,
+        birth_date=data.birth_date,
+        age=data.age,
+        memorial_date=data.memorial_date,
+        status="pending",
+        location=None
+    )
+    db.add(pet)
+    db.commit()
+    db.refresh(pet)
+    return pet
+
+
+@router.put("/pets/{pet_id}", response_model=PetResponse)
+def update_my_pet(
+    pet_id: int,
+    data: PetUpdate,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    """更新我的毛孩資料（僅限飼主本人）"""
+    pet = db.query(Pet).filter(Pet.id == pet_id, Pet.owner_id == current_user.id).first()
+    if not pet:
+        raise HTTPException(status_code=404, detail="找不到該毛孩資料，或您無權編輯")
+
+    update_data = data.model_dump(exclude_unset=True)
+    for field, value in update_data.items():
+        setattr(pet, field, value)
+
+    db.commit()
+    db.refresh(pet)
+    return pet
 
 
 @router.get("/admin/orders", response_model=List[OrderResponse])

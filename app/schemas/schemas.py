@@ -125,6 +125,26 @@ class RefreshRequest(BaseModel):
     refresh_token: str
 
 
+class ForgotPasswordRequest(BaseModel):
+    email: EmailStr
+
+
+class ResetPasswordRequest(BaseModel):
+    token: str
+    new_password: str
+
+    @field_validator("new_password")
+    @classmethod
+    def password_strength(cls, v):
+        if len(v) < 8:
+            raise ValueError("密碼至少需要 8 個字元")
+        if not re.search(r"[A-Z]", v):
+            raise ValueError("密碼至少需要 1 個大寫英文")
+        if not re.search(r"[0-9]", v):
+            raise ValueError("密碼至少需要 1 個數字")
+        return v
+
+
 # ========================================
 # Pet Schemas
 # 來源：Account.vue 毛孩資料 + Booking.vue Step 2 + Admin.vue

@@ -22,6 +22,10 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
     ALLOWED_ORIGINS: str = "http://localhost:5173"
+    FRONTEND_URL: str = "http://127.0.0.1:5173"
+    GOOGLE_CLIENT_ID: str = ""
+    GOOGLE_CLIENT_SECRET: str = ""
+    GOOGLE_REDIRECT_URI: str = "http://127.0.0.1:8000/api/v1/auth/google/callback"
 
     # 管理員預設帳號
     ADMIN_EMAIL: str = "admin@maosmain.com"
