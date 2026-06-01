@@ -14,7 +14,7 @@ from app.models.user import User  # 觸發所有 model 載入
 from app.models.user import Base  # 用於建立資料表
 
 # 3. 引入所有路由端點
-from app.api.v1.endpoints import auth, bookings, plans_orders, admin_users, membership
+from app.api.v1.endpoints import auth, bookings, plans_orders, admin_users, membership, rituals
 from app.middleware.rate_limit import rate_limit_middleware
 
 
@@ -102,6 +102,7 @@ app.include_router(bookings.router,     prefix=PREFIX)
 app.include_router(plans_orders.router, prefix=PREFIX)
 app.include_router(admin_users.router,  prefix=PREFIX)
 app.include_router(membership.router,   prefix=PREFIX)
+app.include_router(rituals.router,      prefix=PREFIX)
 
 # ========== 系統健康檢查 ==========
 

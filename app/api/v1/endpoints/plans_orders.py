@@ -106,12 +106,16 @@ def create_my_pet(
     current_user=Depends(get_current_user),
 ):
     """新增我的毛孩資料"""
-    # 產生唯一的 pet_id (格式：PET-MTX-XXXXXX)
+    # 產生唯一的 pet_id (格式：PET-MTX-00000X，依據最大 ID + 1 遞增)
+    from sqlalchemy import func
+    max_id = db.query(func.max(Pet.id)).scalar() or 0
+    next_id = max_id + 1
     while True:
-        candidate_id = f"PET-MTX-{random.randint(100000, 999999)}"
+        candidate_id = f"PET-MTX-{next_id:06d}"
         exists = db.query(Pet).filter(Pet.pet_id == candidate_id).first()
         if not exists:
             break
+        next_id += 1
 
     # 建立 Pet 實例
     pet = Pet(

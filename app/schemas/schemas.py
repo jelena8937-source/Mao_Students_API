@@ -383,6 +383,20 @@ class RitualCreate(BaseModel):
     description: Optional[str] = None
 
 
+class RitualUpdate(BaseModel):
+    """Admin.vue 編輯法會"""
+    title: Optional[str] = None
+    ritual_date: Optional[date] = None
+    weekday: Optional[str] = None
+    start_time: Optional[str] = None
+    end_time: Optional[str] = None
+    location: Optional[str] = None
+    capacity: Optional[int] = None
+    fee: Optional[Decimal] = None
+    status: Optional[str] = None
+    description: Optional[str] = None
+
+
 class RitualRegistrationCreate(BaseModel):
     """
     法會報名
