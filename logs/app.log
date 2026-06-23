@@ -5331,3 +5331,676 @@ FROM bookings ORDER BY bookings.created_at DESC
 FROM rituals ORDER BY rituals.ritual_date ASC
 2026-06-01 19:22:12,201 - sqlalchemy.engine.Engine - INFO - [cached since 395.9s ago] {}
 2026-06-01 19:22:12,332 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:31:02,557 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2026-06-01 19:31:02,558 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-01 19:31:02,796 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2026-06-01 19:31:02,797 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-01 19:31:03,021 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2026-06-01 19:31:03,022 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-01 19:31:03,216 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:31:03,222 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:03,223 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] {'table_name': 'users', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:03,431 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:03,432 - sqlalchemy.engine.Engine - INFO - [cached since 0.2093s ago] {'table_name': 'pets', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:03,530 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:03,530 - sqlalchemy.engine.Engine - INFO - [cached since 0.3079s ago] {'table_name': 'bookings', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:03,624 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:03,624 - sqlalchemy.engine.Engine - INFO - [cached since 0.4018s ago] {'table_name': 'orders', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:03,730 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:03,731 - sqlalchemy.engine.Engine - INFO - [cached since 0.508s ago] {'table_name': 'rituals', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:03,830 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:03,830 - sqlalchemy.engine.Engine - INFO - [cached since 0.6072s ago] {'table_name': 'ritual_registrations', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,253 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,253 - sqlalchemy.engine.Engine - INFO - [generated in 0.00055s] {'typname_1': 'membertype', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,351 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,352 - sqlalchemy.engine.Engine - INFO - [cached since 0.09882s ago] {'typname_1': 'userrole', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,459 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,460 - sqlalchemy.engine.Engine - INFO - [cached since 0.2066s ago] {'typname_1': 'pettype', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,561 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,561 - sqlalchemy.engine.Engine - INFO - [cached since 0.3087s ago] {'typname_1': 'petstatus', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,669 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,669 - sqlalchemy.engine.Engine - INFO - [cached since 0.4167s ago] {'typname_1': 'servicetype', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,785 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,786 - sqlalchemy.engine.Engine - INFO - [cached since 0.5325s ago] {'typname_1': 'bookingstatus', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,890 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,890 - sqlalchemy.engine.Engine - INFO - [cached since 0.6376s ago] {'typname_1': 'orderstatus', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:04,987 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-01 19:31:04,988 - sqlalchemy.engine.Engine - INFO - [cached since 0.7345s ago] {'typname_1': 'ritualstatus', 'nspname_1': 'pg_catalog'}
+2026-06-01 19:31:05,087 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-01 19:31:05,306 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:31:05,309 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-01 19:31:05,309 - sqlalchemy.engine.Engine - INFO - [generated in 0.00034s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-01 19:31:05,514 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:36:50,681 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:36:50,688 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-01 19:36:50,688 - sqlalchemy.engine.Engine - INFO - [generated in 0.00049s] {'role_1': 'admin'}
+2026-06-01 19:36:50,888 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:54:11,004 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:54:11,006 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-01 19:54:11,007 - sqlalchemy.engine.Engine - INFO - [generated in 0.00052s] {}
+2026-06-01 19:54:11,197 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:54:26,447 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:54:26,447 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-01 19:54:26,448 - sqlalchemy.engine.Engine - INFO - [cached since 1401s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-01 19:54:26,649 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\pisci\Desktop\maosmain-backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-01 19:54:27,160 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:54:27,390 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:54:27,392 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-01 19:54:27,392 - sqlalchemy.engine.Engine - INFO - [generated in 0.00055s] {'id_1': 1, 'param_1': 1}
+2026-06-01 19:54:27,623 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users ORDER BY users.created_at DESC
+2026-06-01 19:54:27,624 - sqlalchemy.engine.Engine - INFO - [generated in 0.00080s] {}
+2026-06-01 19:54:27,886 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:54:30,500 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:54:30,501 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-01 19:54:30,502 - sqlalchemy.engine.Engine - INFO - [cached since 19.5s ago] {}
+2026-06-01 19:54:30,509 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:54:30,510 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-01 19:54:30,511 - sqlalchemy.engine.Engine - INFO - [cached since 3.118s ago] {'id_1': 1, 'param_1': 1}
+2026-06-01 19:54:30,648 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:54:30,693 - sqlalchemy.engine.Engine - INFO - SELECT bookings.id AS bookings_id, bookings.user_id AS bookings_user_id, bookings.owner_name AS bookings_owner_name, bookings.phone AS bookings_phone, bookings.email AS bookings_email, bookings.member_id_input AS bookings_member_id_input, bookings.pet_name AS bookings_pet_name, bookings.pet_type AS bookings_pet_type, bookings.pet_breed AS bookings_pet_breed, bookings.pet_age AS bookings_pet_age, bookings.service_type AS bookings_service_type, bookings.self_cremation AS bookings_self_cremation, bookings.preferred_date AS bookings_preferred_date, bookings.preferred_time AS bookings_preferred_time, bookings.message AS bookings_message, bookings.agreed_to_terms AS bookings_agreed_to_terms, bookings.estimated_amount AS bookings_estimated_amount, bookings.status AS bookings_status, bookings.admin_notes AS bookings_admin_notes, bookings.assigned_staff AS bookings_assigned_staff, bookings.created_at AS bookings_created_at, bookings.updated_at AS bookings_updated_at 
+FROM bookings ORDER BY bookings.created_at DESC
+2026-06-01 19:54:30,694 - sqlalchemy.engine.Engine - INFO - [generated in 0.00070s] {}
+2026-06-01 19:54:30,785 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 19:58:04,753 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 19:58:04,754 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-01 19:58:04,754 - sqlalchemy.engine.Engine - INFO - [cached since 1274s ago] {'role_1': 'admin'}
+2026-06-01 19:58:04,950 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 20:10:39,954 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 20:10:39,955 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-01 20:10:39,955 - sqlalchemy.engine.Engine - INFO - [cached since 2029s ago] {'role_1': 'admin'}
+2026-06-01 20:10:39,979 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-01 20:10:39,980 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-01 20:10:39,980 - sqlalchemy.engine.Engine - INFO - [cached since 989s ago] {}
+2026-06-01 20:10:40,040 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-01 20:10:40,069 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-02 10:25:10,816 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2026-06-02 10:25:10,817 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-02 10:25:11,244 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2026-06-02 10:25:11,244 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-02 10:25:11,398 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2026-06-02 10:25:11,399 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-02 10:25:11,537 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-02 10:25:11,545 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:11,545 - sqlalchemy.engine.Engine - INFO - [generated in 0.00048s] {'table_name': 'users', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:11,684 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:11,684 - sqlalchemy.engine.Engine - INFO - [cached since 0.139s ago] {'table_name': 'pets', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:11,779 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:11,779 - sqlalchemy.engine.Engine - INFO - [cached since 0.2348s ago] {'table_name': 'bookings', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:11,866 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:11,867 - sqlalchemy.engine.Engine - INFO - [cached since 0.3217s ago] {'table_name': 'orders', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:11,940 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:11,942 - sqlalchemy.engine.Engine - INFO - [cached since 0.3968s ago] {'table_name': 'rituals', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,010 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,011 - sqlalchemy.engine.Engine - INFO - [cached since 0.4661s ago] {'table_name': 'ritual_registrations', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,075 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,076 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] {'typname_1': 'membertype', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,149 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,149 - sqlalchemy.engine.Engine - INFO - [cached since 0.07454s ago] {'typname_1': 'userrole', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,229 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,229 - sqlalchemy.engine.Engine - INFO - [cached since 0.1542s ago] {'typname_1': 'pettype', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,302 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,303 - sqlalchemy.engine.Engine - INFO - [cached since 0.2275s ago] {'typname_1': 'petstatus', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,400 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,401 - sqlalchemy.engine.Engine - INFO - [cached since 0.3256s ago] {'typname_1': 'servicetype', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,476 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,477 - sqlalchemy.engine.Engine - INFO - [cached since 0.4017s ago] {'typname_1': 'bookingstatus', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,551 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,551 - sqlalchemy.engine.Engine - INFO - [cached since 0.4764s ago] {'typname_1': 'orderstatus', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,620 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-02 10:25:12,620 - sqlalchemy.engine.Engine - INFO - [cached since 0.545s ago] {'typname_1': 'ritualstatus', 'nspname_1': 'pg_catalog'}
+2026-06-02 10:25:12,685 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-02 10:25:12,848 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-02 10:25:12,852 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-02 10:25:12,852 - sqlalchemy.engine.Engine - INFO - [generated in 0.00039s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-02 10:25:13,015 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-02 10:26:55,034 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-02 10:26:55,040 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-02 10:26:55,041 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] {}
+2026-06-02 10:26:55,224 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-02 10:26:56,617 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-02 10:26:56,623 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-02 10:26:56,624 - sqlalchemy.engine.Engine - INFO - [generated in 0.00050s] {'role_1': 'admin'}
+2026-06-02 10:26:56,784 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-02 10:27:17,946 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-02 10:27:17,947 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-02 10:27:17,947 - sqlalchemy.engine.Engine - INFO - [cached since 22.91s ago] {}
+2026-06-02 10:27:18,092 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:18:32,764 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:18:32,768 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-03 19:18:32,769 - sqlalchemy.engine.Engine - INFO - [cached since 1.183e+05s ago] {'role_1': 'admin'}
+2026-06-03 19:18:32,774 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:18:32,775 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-03 19:18:32,775 - sqlalchemy.engine.Engine - INFO - [cached since 1.183e+05s ago] {}
+2026-06-03 19:18:32,890 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:18:32,897 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:55:43,209 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2026-06-03 19:55:43,210 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-03 19:55:43,302 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2026-06-03 19:55:43,302 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-03 19:55:43,396 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2026-06-03 19:55:43,397 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-03 19:55:43,488 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:55:43,493 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,494 - sqlalchemy.engine.Engine - INFO - [generated in 0.00078s] {'table_name': 'users', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,595 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,596 - sqlalchemy.engine.Engine - INFO - [cached since 0.1034s ago] {'table_name': 'pets', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,641 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,642 - sqlalchemy.engine.Engine - INFO - [cached since 0.149s ago] {'table_name': 'bookings', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,693 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,693 - sqlalchemy.engine.Engine - INFO - [cached since 0.2006s ago] {'table_name': 'orders', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,739 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,739 - sqlalchemy.engine.Engine - INFO - [cached since 0.2464s ago] {'table_name': 'rituals', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,784 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,785 - sqlalchemy.engine.Engine - INFO - [cached since 0.2918s ago] {'table_name': 'ritual_registrations', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,831 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,832 - sqlalchemy.engine.Engine - INFO - [generated in 0.00064s] {'typname_1': 'membertype', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,876 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,877 - sqlalchemy.engine.Engine - INFO - [cached since 0.04616s ago] {'typname_1': 'userrole', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,922 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,922 - sqlalchemy.engine.Engine - INFO - [cached since 0.09195s ago] {'typname_1': 'pettype', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:43,982 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:43,982 - sqlalchemy.engine.Engine - INFO - [cached since 0.1516s ago] {'typname_1': 'petstatus', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:44,031 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:44,032 - sqlalchemy.engine.Engine - INFO - [cached since 0.201s ago] {'typname_1': 'servicetype', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:44,075 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:44,076 - sqlalchemy.engine.Engine - INFO - [cached since 0.2451s ago] {'typname_1': 'bookingstatus', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:44,121 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:44,122 - sqlalchemy.engine.Engine - INFO - [cached since 0.2914s ago] {'typname_1': 'orderstatus', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:44,166 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-06-03 19:55:44,168 - sqlalchemy.engine.Engine - INFO - [cached since 0.3369s ago] {'typname_1': 'ritualstatus', 'nspname_1': 'pg_catalog'}
+2026-06-03 19:55:44,211 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-03 19:55:44,352 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:55:44,356 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-03 19:55:44,357 - sqlalchemy.engine.Engine - INFO - [generated in 0.00078s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-03 19:55:44,450 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:57:42,987 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:57:42,988 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-03 19:57:42,989 - sqlalchemy.engine.Engine - INFO - [cached since 118.6s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-03 19:57:43,077 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\pisci\Desktop\maosmain-backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-03 19:57:43,687 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:57:43,831 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:57:43,834 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-03 19:57:43,835 - sqlalchemy.engine.Engine - INFO - [generated in 0.00054s] {'id_1': 1, 'param_1': 1}
+2026-06-03 19:57:43,926 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users ORDER BY users.created_at DESC
+2026-06-03 19:57:43,928 - sqlalchemy.engine.Engine - INFO - [generated in 0.00145s] {}
+2026-06-03 19:57:43,979 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:57:44,285 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:57:44,286 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:57:44,291 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-03 19:57:44,294 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-03 19:57:44,297 - sqlalchemy.engine.Engine - INFO - [generated in 0.00530s] {}
+2026-06-03 19:57:44,297 - sqlalchemy.engine.Engine - INFO - [cached since 0.4626s ago] {'id_1': 1, 'param_1': 1}
+2026-06-03 19:57:44,386 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:57:44,398 - sqlalchemy.engine.Engine - INFO - SELECT bookings.id AS bookings_id, bookings.user_id AS bookings_user_id, bookings.owner_name AS bookings_owner_name, bookings.phone AS bookings_phone, bookings.email AS bookings_email, bookings.member_id_input AS bookings_member_id_input, bookings.pet_name AS bookings_pet_name, bookings.pet_type AS bookings_pet_type, bookings.pet_breed AS bookings_pet_breed, bookings.pet_age AS bookings_pet_age, bookings.service_type AS bookings_service_type, bookings.self_cremation AS bookings_self_cremation, bookings.preferred_date AS bookings_preferred_date, bookings.preferred_time AS bookings_preferred_time, bookings.message AS bookings_message, bookings.agreed_to_terms AS bookings_agreed_to_terms, bookings.estimated_amount AS bookings_estimated_amount, bookings.status AS bookings_status, bookings.admin_notes AS bookings_admin_notes, bookings.assigned_staff AS bookings_assigned_staff, bookings.created_at AS bookings_created_at, bookings.updated_at AS bookings_updated_at 
+FROM bookings ORDER BY bookings.created_at DESC
+2026-06-03 19:57:44,402 - sqlalchemy.engine.Engine - INFO - [generated in 0.00413s] {}
+2026-06-03 19:57:44,454 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:57:58,593 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:57:58,601 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-03 19:57:58,605 - sqlalchemy.engine.Engine - INFO - [generated in 0.00353s] {'role_1': 'admin'}
+2026-06-03 19:57:58,697 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:58:04,861 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:58:04,863 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.role != %(role_1)s) AS anon_1
+2026-06-03 19:58:04,863 - sqlalchemy.engine.Engine - INFO - [cached since 6.262s ago] {'role_1': 'admin'}
+2026-06-03 19:58:04,954 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:58:41,639 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:58:41,641 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-03 19:58:41,642 - sqlalchemy.engine.Engine - INFO - [cached since 57.81s ago] {'id_1': 1, 'param_1': 1}
+2026-06-03 19:58:41,738 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:58:41,845 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:58:41,845 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-03 19:58:41,847 - sqlalchemy.engine.Engine - INFO - [cached since 58.02s ago] {'id_1': 1, 'param_1': 1}
+2026-06-03 19:58:41,850 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:58:41,851 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-03 19:58:41,852 - sqlalchemy.engine.Engine - INFO - [cached since 58.02s ago] {'id_1': 1, 'param_1': 1}
+2026-06-03 19:58:41,940 - sqlalchemy.engine.Engine - INFO - SELECT orders.id AS orders_id, orders.user_id AS orders_user_id, orders.pet_id AS orders_pet_id, orders.booking_id AS orders_booking_id, orders.order_number AS orders_order_number, orders.service_type AS orders_service_type, orders.service_description AS orders_service_description, orders.amount AS orders_amount, orders.self_cremation_discount AS orders_self_cremation_discount, orders.status AS orders_status, orders.progress AS orders_progress, orders.contact_date AS orders_contact_date, orders.contact_time_slot AS orders_contact_time_slot, orders.note AS orders_note, orders.admin_note AS orders_admin_note, orders.enshrine_location AS orders_enshrine_location, orders.paid_at AS orders_paid_at, orders.completed_at AS orders_completed_at, orders.created_at AS orders_created_at, orders.updated_at AS orders_updated_at 
+FROM orders 
+WHERE orders.user_id = %(user_id_1)s ORDER BY orders.created_at DESC
+2026-06-03 19:58:41,940 - sqlalchemy.engine.Engine - INFO - [generated in 0.00100s] {'user_id_1': 1}
+2026-06-03 19:58:41,947 - sqlalchemy.engine.Engine - INFO - SELECT bookings.id AS bookings_id, bookings.user_id AS bookings_user_id, bookings.owner_name AS bookings_owner_name, bookings.phone AS bookings_phone, bookings.email AS bookings_email, bookings.member_id_input AS bookings_member_id_input, bookings.pet_name AS bookings_pet_name, bookings.pet_type AS bookings_pet_type, bookings.pet_breed AS bookings_pet_breed, bookings.pet_age AS bookings_pet_age, bookings.service_type AS bookings_service_type, bookings.self_cremation AS bookings_self_cremation, bookings.preferred_date AS bookings_preferred_date, bookings.preferred_time AS bookings_preferred_time, bookings.message AS bookings_message, bookings.agreed_to_terms AS bookings_agreed_to_terms, bookings.estimated_amount AS bookings_estimated_amount, bookings.status AS bookings_status, bookings.admin_notes AS bookings_admin_notes, bookings.assigned_staff AS bookings_assigned_staff, bookings.created_at AS bookings_created_at, bookings.updated_at AS bookings_updated_at 
+FROM bookings 
+WHERE bookings.user_id = %(user_id_1)s ORDER BY bookings.created_at DESC
+2026-06-03 19:58:41,948 - sqlalchemy.engine.Engine - INFO - [generated in 0.00105s] {'user_id_1': 1}
+2026-06-03 19:58:41,996 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:58:41,996 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-03 19:58:42,117 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-03 19:58:42,120 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.role AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-03 19:58:42,121 - sqlalchemy.engine.Engine - INFO - [cached since 58.29s ago] {'id_1': 1, 'param_1': 1}
+2026-06-03 19:58:42,222 - sqlalchemy.engine.Engine - INFO - SELECT pets.id AS pets_id, pets.owner_id AS pets_owner_id, pets.pet_id AS pets_pet_id, pets.name AS pets_name, pets.pet_type AS pets_pet_type, pets.breed AS pets_breed, pets.birth_date AS pets_birth_date, pets.age AS pets_age, pets.memorial_date AS pets_memorial_date, pets.status AS pets_status, pets.location AS pets_location, pets.created_at AS pets_created_at, pets.updated_at AS pets_updated_at 
+FROM pets 
+WHERE pets.owner_id = %(owner_id_1)s
+2026-06-03 19:58:42,223 - sqlalchemy.engine.Engine - INFO - [generated in 0.00136s] {'owner_id_1': 1}
+2026-06-03 19:58:42,285 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:05:13,421 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2026-06-23 14:05:13,421 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,428 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2026-06-23 14:05:13,428 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,429 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2026-06-23 14:05:13,429 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,433 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:05:13,433 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`users`
+2026-06-23 14:05:13,434 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,500 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`pets`
+2026-06-23 14:05:13,501 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,504 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`bookings`
+2026-06-23 14:05:13,504 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,511 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`orders`
+2026-06-23 14:05:13,511 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,516 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`rituals`
+2026-06-23 14:05:13,516 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,519 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`ritual_registrations`
+2026-06-23 14:05:13,520 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:05:13,525 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-23 14:05:13,547 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:05:13,551 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:05:13,551 - sqlalchemy.engine.Engine - INFO - [generated in 0.00034s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 14:05:13,605 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:06:58,697 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:06:58,706 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.`role` != %(role_1)s) AS anon_1
+2026-06-23 14:06:58,706 - sqlalchemy.engine.Engine - INFO - [generated in 0.00065s] {'role_1': 'admin'}
+2026-06-23 14:06:58,711 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:21:19,634 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:21:19,635 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:21:19,635 - sqlalchemy.engine.Engine - INFO - [cached since 966.1s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 14:21:19,639 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\pisci\Desktop\maosmain-backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-23 14:21:20,207 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:21:41,836 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:21:41,837 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:21:41,838 - sqlalchemy.engine.Engine - INFO - [cached since 988.3s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 14:21:42,349 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:22:57,593 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:22:57,596 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:22:57,596 - sqlalchemy.engine.Engine - INFO - [cached since 1064s ago] {'email_1': 'admin@maosmain.com', 'param_1': 1}
+2026-06-23 14:22:58,095 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:24:35,283 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:24:35,288 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:24:35,289 - sqlalchemy.engine.Engine - INFO - [cached since 1162s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 14:24:35,829 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:24:55,198 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:24:55,198 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:24:55,199 - sqlalchemy.engine.Engine - INFO - [cached since 1182s ago] {'email_1': 'admin@maosmain.com', 'param_1': 1}
+2026-06-23 14:24:55,707 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:25:12,354 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:25:12,355 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:25:12,356 - sqlalchemy.engine.Engine - INFO - [cached since 1199s ago] {'email_1': 'admin@maosmain.com', 'param_1': 1}
+2026-06-23 14:25:12,871 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:32:24,159 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:32:24,159 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:32:24,160 - sqlalchemy.engine.Engine - INFO - [cached since 1631s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 14:32:24,661 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 14:33:30,222 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2026-06-23 14:33:30,222 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,223 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2026-06-23 14:33:30,224 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,225 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2026-06-23 14:33:30,225 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,226 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:33:30,226 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`users`
+2026-06-23 14:33:30,226 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,231 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`pets`
+2026-06-23 14:33:30,231 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,234 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`bookings`
+2026-06-23 14:33:30,234 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,236 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`orders`
+2026-06-23 14:33:30,236 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,241 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`rituals`
+2026-06-23 14:33:30,241 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,243 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`ritual_registrations`
+2026-06-23 14:33:30,243 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 14:33:30,246 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-23 14:33:30,268 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 14:33:30,271 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 14:33:30,272 - sqlalchemy.engine.Engine - INFO - [generated in 0.00036s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 14:33:30,274 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:36:28,979 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2026-06-23 15:36:28,980 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:28,982 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2026-06-23 15:36:28,982 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:28,983 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2026-06-23 15:36:28,983 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:28,985 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:36:28,986 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`users`
+2026-06-23 15:36:28,986 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:29,016 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`pets`
+2026-06-23 15:36:29,016 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:29,020 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`bookings`
+2026-06-23 15:36:29,020 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:29,025 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`orders`
+2026-06-23 15:36:29,025 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:29,030 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`rituals`
+2026-06-23 15:36:29,030 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:29,033 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`ritual_registrations`
+2026-06-23 15:36:29,033 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:36:29,038 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-23 15:36:29,059 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:36:29,063 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 15:36:29,064 - sqlalchemy.engine.Engine - INFO - [generated in 0.00033s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 15:36:29,065 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:37:52,234 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2026-06-23 15:37:52,235 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,236 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2026-06-23 15:37:52,237 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,237 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2026-06-23 15:37:52,237 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,238 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:37:52,238 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`users`
+2026-06-23 15:37:52,238 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,242 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`pets`
+2026-06-23 15:37:52,242 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,244 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`bookings`
+2026-06-23 15:37:52,244 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,246 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`orders`
+2026-06-23 15:37:52,246 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,249 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`rituals`
+2026-06-23 15:37:52,249 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,253 - sqlalchemy.engine.Engine - INFO - DESCRIBE `mao_students_db`.`ritual_registrations`
+2026-06-23 15:37:52,254 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2026-06-23 15:37:52,259 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-23 15:37:52,278 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:37:52,281 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 15:37:52,281 - sqlalchemy.engine.Engine - INFO - [generated in 0.00026s] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 15:37:52,283 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:41:48,102 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:41:48,103 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-23 15:41:48,103 - sqlalchemy.engine.Engine - INFO - [cached since 235.8s ago] {'email_1': 'maostudents3@gmail.com', 'param_1': 1}
+2026-06-23 15:41:48,107 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\pisci\Desktop\maosmain-backend\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-23 15:41:49,213 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:41:49,280 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:41:49,283 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:41:49,284 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:41:49,295 - sqlalchemy.engine.Engine - INFO - SELECT bookings.id AS bookings_id, bookings.user_id AS bookings_user_id, bookings.owner_name AS bookings_owner_name, bookings.phone AS bookings_phone, bookings.email AS bookings_email, bookings.member_id_input AS bookings_member_id_input, bookings.pet_name AS bookings_pet_name, bookings.pet_type AS bookings_pet_type, bookings.pet_breed AS bookings_pet_breed, bookings.pet_age AS bookings_pet_age, bookings.service_type AS bookings_service_type, bookings.self_cremation AS bookings_self_cremation, bookings.preferred_date AS bookings_preferred_date, bookings.preferred_time AS bookings_preferred_time, bookings.message AS bookings_message, bookings.agreed_to_terms AS bookings_agreed_to_terms, bookings.estimated_amount AS bookings_estimated_amount, bookings.status AS bookings_status, bookings.admin_notes AS bookings_admin_notes, bookings.assigned_staff AS bookings_assigned_staff, bookings.created_at AS bookings_created_at, bookings.updated_at AS bookings_updated_at 
+FROM bookings ORDER BY bookings.created_at DESC
+2026-06-23 15:41:49,296 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:41:49,297 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:41:49,297 - sqlalchemy.engine.Engine - INFO - [cached since 0.01412s ago] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:41:49,298 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:41:49,296 - sqlalchemy.engine.Engine - INFO - [generated in 0.00114s] {}
+2026-06-23 15:41:49,301 - sqlalchemy.engine.Engine - INFO - SELECT rituals.id AS rituals_id, rituals.ritual_id AS rituals_ritual_id, rituals.title AS rituals_title, rituals.ritual_date AS rituals_ritual_date, rituals.weekday AS rituals_weekday, rituals.start_time AS rituals_start_time, rituals.end_time AS rituals_end_time, rituals.location AS rituals_location, rituals.capacity AS rituals_capacity, rituals.registered_count AS rituals_registered_count, rituals.description AS rituals_description, rituals.fee AS rituals_fee, rituals.status AS rituals_status, rituals.created_at AS rituals_created_at, rituals.updated_at AS rituals_updated_at 
+FROM rituals ORDER BY rituals.ritual_date ASC
+2026-06-23 15:41:49,305 - sqlalchemy.engine.Engine - INFO - [generated in 0.00389s] {}
+2026-06-23 15:41:49,304 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users ORDER BY users.created_at DESC
+2026-06-23 15:41:49,305 - sqlalchemy.engine.Engine - INFO - [generated in 0.00126s] {}
+2026-06-23 15:41:49,321 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:41:49,340 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:41:49,367 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:42:10,281 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:10,299 - sqlalchemy.engine.Engine - INFO - SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.`role` != %(role_1)s) AS anon_1
+2026-06-23 15:42:10,300 - sqlalchemy.engine.Engine - INFO - [generated in 0.00059s] {'role_1': 'admin'}
+2026-06-23 15:42:10,303 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:42:12,794 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:12,796 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:42:12,796 - sqlalchemy.engine.Engine - INFO - [cached since 23.51s ago] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:42:12,800 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:42:12,844 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:12,845 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:42:12,847 - sqlalchemy.engine.Engine - INFO - [cached since 23.56s ago] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:42:12,849 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:12,850 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:42:12,852 - sqlalchemy.engine.Engine - INFO - [cached since 23.57s ago] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:42:12,859 - sqlalchemy.engine.Engine - INFO - SELECT orders.id AS orders_id, orders.user_id AS orders_user_id, orders.pet_id AS orders_pet_id, orders.booking_id AS orders_booking_id, orders.order_number AS orders_order_number, orders.service_type AS orders_service_type, orders.service_description AS orders_service_description, orders.amount AS orders_amount, orders.self_cremation_discount AS orders_self_cremation_discount, orders.status AS orders_status, orders.progress AS orders_progress, orders.contact_date AS orders_contact_date, orders.contact_time_slot AS orders_contact_time_slot, orders.note AS orders_note, orders.admin_note AS orders_admin_note, orders.enshrine_location AS orders_enshrine_location, orders.paid_at AS orders_paid_at, orders.completed_at AS orders_completed_at, orders.created_at AS orders_created_at, orders.updated_at AS orders_updated_at 
+FROM orders 
+WHERE orders.user_id = %(user_id_1)s ORDER BY orders.created_at DESC
+2026-06-23 15:42:12,859 - sqlalchemy.engine.Engine - INFO - [generated in 0.00106s] {'user_id_1': 9}
+2026-06-23 15:42:12,864 - sqlalchemy.engine.Engine - INFO - SELECT bookings.id AS bookings_id, bookings.user_id AS bookings_user_id, bookings.owner_name AS bookings_owner_name, bookings.phone AS bookings_phone, bookings.email AS bookings_email, bookings.member_id_input AS bookings_member_id_input, bookings.pet_name AS bookings_pet_name, bookings.pet_type AS bookings_pet_type, bookings.pet_breed AS bookings_pet_breed, bookings.pet_age AS bookings_pet_age, bookings.service_type AS bookings_service_type, bookings.self_cremation AS bookings_self_cremation, bookings.preferred_date AS bookings_preferred_date, bookings.preferred_time AS bookings_preferred_time, bookings.message AS bookings_message, bookings.agreed_to_terms AS bookings_agreed_to_terms, bookings.estimated_amount AS bookings_estimated_amount, bookings.status AS bookings_status, bookings.admin_notes AS bookings_admin_notes, bookings.assigned_staff AS bookings_assigned_staff, bookings.created_at AS bookings_created_at, bookings.updated_at AS bookings_updated_at 
+FROM bookings 
+WHERE bookings.user_id = %(user_id_1)s ORDER BY bookings.created_at DESC
+2026-06-23 15:42:12,864 - sqlalchemy.engine.Engine - INFO - [generated in 0.00061s] {'user_id_1': 9}
+2026-06-23 15:42:12,869 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:42:12,893 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:42:12,911 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:12,912 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:42:12,913 - sqlalchemy.engine.Engine - INFO - [cached since 23.63s ago] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:42:12,919 - sqlalchemy.engine.Engine - INFO - SELECT pets.id AS pets_id, pets.owner_id AS pets_owner_id, pets.pet_id AS pets_pet_id, pets.name AS pets_name, pets.pet_type AS pets_pet_type, pets.breed AS pets_breed, pets.birth_date AS pets_birth_date, pets.age AS pets_age, pets.memorial_date AS pets_memorial_date, pets.status AS pets_status, pets.location AS pets_location, pets.created_at AS pets_created_at, pets.updated_at AS pets_updated_at 
+FROM pets 
+WHERE pets.owner_id = %(owner_id_1)s
+2026-06-23 15:42:12,920 - sqlalchemy.engine.Engine - INFO - [generated in 0.00064s] {'owner_id_1': 9}
+2026-06-23 15:42:12,936 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-06-23 15:42:24,169 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:24,169 - sqlalchemy.engine.Engine - INFO - SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.phone AS users_phone, users.hashed_password AS users_hashed_password, users.member_id AS users_member_id, users.member_type AS users_member_type, users.member_since AS users_member_since, users.`role` AS users_role, users.is_active AS users_is_active, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = %(id_1)s AND users.is_active = true 
+ LIMIT %(param_1)s
+2026-06-23 15:42:24,170 - sqlalchemy.engine.Engine - INFO - [cached since 34.89s ago] {'id_1': 9, 'param_1': 1}
+2026-06-23 15:42:24,185 - sqlalchemy.engine.Engine - INFO - UPDATE users SET phone=%(phone)s, updated_at=now() WHERE users.id = %(users_id)s
+2026-06-23 15:42:24,185 - sqlalchemy.engine.Engine - INFO - [generated in 0.00064s] {'phone': '0912123123', 'users_id': 9}
+2026-06-23 15:42:24,197 - sqlalchemy.engine.Engine - INFO - COMMIT
+2026-06-23 15:42:24,231 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-06-23 15:42:24,234 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.phone, users.hashed_password, users.member_id, users.member_type, users.member_since, users.`role`, users.is_active, users.created_at, users.updated_at 
+FROM users 
+WHERE users.id = %(pk_1)s
+2026-06-23 15:42:24,235 - sqlalchemy.engine.Engine - INFO - [generated in 0.00102s] {'pk_1': 9}
+2026-06-23 15:42:24,239 - sqlalchemy.engine.Engine - INFO - ROLLBACK
