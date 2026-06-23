@@ -14,7 +14,11 @@ async def rate_limit_middleware(request: Request, call_next):
     - 一般 API：每分鐘 60 次
     - 登入/註冊：每分鐘 10 次（防暴力破解）
     """
-    client_ip = request.client.host
+    # CORS 預檢請求 (OPTIONS) 直接放行，不進行頻率限制
+    if request.method == "OPTIONS":
+        return await call_next(request)
+
+    client_ip = request.client.host if request.client else "unknown"
     path = request.url.path
     now = datetime.utcnow()
 
