@@ -69,11 +69,11 @@ class Settings(BaseSettings):
     APP_NAME: str = "毛同學後端 API"
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
-    ALLOWED_ORIGINS: str = "http://localhost:5173"
-    FRONTEND_URL: str = "http://127.0.0.1:5173"
+    ALLOWED_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173,https://mao-students-git-main-maostudents3-3998s-projects.vercel.app,https://mao-students.vercel.app,https://mao-students-maostudents3-3998s-projects.vercel.app"
+    FRONTEND_URL: str = "https://mao-students-git-main-maostudents3-3998s-projects.vercel.app"
     GOOGLE_CLIENT_ID: str = ""
     GOOGLE_CLIENT_SECRET: str = ""
-    GOOGLE_REDIRECT_URI: str = "http://127.0.0.1:8000/api/v1/auth/google/callback"
+    GOOGLE_REDIRECT_URI: str = "https://mao-students-api.onrender.com/api/v1/auth/google/callback"
 
     # 管理員預設帳號
     ADMIN_EMAIL: str = "maostudents3@gmail.com"
