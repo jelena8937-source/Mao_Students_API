@@ -232,7 +232,7 @@ class BookingCreate(BaseModel):
     @field_validator("service_type")
     @classmethod
     def valid_service(cls, v):
-        valid = ["consultation", "plan_a", "plan_b", "ritual", "membership"]
+        valid = ["consultation", "plan_a", "plan_b", "plan_ac", "plan_ad", "plan_bc", "plan_bd", "ritual", "membership"]
         if v not in valid:
             raise ValueError(f"無效的服務類型，可用值：{valid}")
         return v

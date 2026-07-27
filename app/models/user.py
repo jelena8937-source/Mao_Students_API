@@ -51,10 +51,14 @@ class PetStatus(str, enum.Enum):
 class ServiceType(str, enum.Enum):
     """服務類型（來自 Booking.vue serviceTypes）"""
     consultation = "consultation"   # 諮詢服務（免費）
-    plan_a = "plan_a"               # 方案A - 自行取回 NT$8,800
-    plan_b = "plan_b"               # 方案B - 永久供養在蓮花勝境 NT$12,800
+    plan_a = "plan_a"               # 舊方案A（保留相容歷史資料）
+    plan_b = "plan_b"               # 舊方案B（保留相容歷史資料）
+    plan_ac = "plan_ac"             # 方案A + 方案C (NT$15,800)
+    plan_ad = "plan_ad"             # 方案A + 方案D (NT$25,700)
+    plan_bc = "plan_bc"             # 方案B + 方案C (NT$10,800)
+    plan_bd = "plan_bd"             # 方案B + 方案D (NT$20,700)
     ritual = "ritual"               # 法會報名 NT$1,800
-    membership = "membership"       # 會員申請 NT$9,800
+    membership = "membership"       # 會員申請
 
 
 class BookingStatus(str, enum.Enum):

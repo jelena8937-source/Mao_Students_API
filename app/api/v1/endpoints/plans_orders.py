@@ -22,16 +22,28 @@ def get_plans():
     """取得所有固定方案與定價（直接呼叫免查資料庫，與 ServiceType 一致）"""
     return [
         {
-            "service_type": "plan_a",
-            "name": "方案A - 自行取回",
-            "price": Decimal("8800.00"),
-            "description": "自行完成火化並取回保管"
+            "service_type": "plan_ac",
+            "name": "方案A + 方案C - 個別火化 + 免費取回留念",
+            "price": Decimal("15800.00"),
+            "description": "方案A基本服務費 (15,800元) + 方案C期滿自行取回 (0元)"
         },
         {
-            "service_type": "plan_b",
-            "name": "方案B - 永久供養在蓮花勝境",
-            "price": Decimal("12800.00"),
-            "description": "永久供養於尊貴的蓮花勝境淨土"
+            "service_type": "plan_ad",
+            "name": "方案A + 方案D - 個別火化 + 永久供養蓮花勝境",
+            "price": Decimal("25700.00"),
+            "description": "方案A基本服務費 (15,800元) + 方案D期滿永久供養 (9,900元)"
+        },
+        {
+            "service_type": "plan_bc",
+            "name": "方案B + 方案C - 純善業泥製作 + 免費取回留念",
+            "price": Decimal("10800.00"),
+            "description": "方案B善業泥製作費 (10,800元) + 方案C期滿自行取回 (0元)"
+        },
+        {
+            "service_type": "plan_bd",
+            "name": "方案B + 方案D - 純善業泥製作 + 永久供養蓮花勝境",
+            "price": Decimal("20700.00"),
+            "description": "方案B善業泥製作費 (10,800元) + 方案D期滿永久供養 (9,900元)"
         }
     ]
 
@@ -45,20 +57,34 @@ def create_order(
     current_user=Depends(get_current_user),
 ):
     """建立訂單 (依據傳入的 service_type 自動計算金額)"""
-    # 驗證傳入的是否為有效方案
-    if data.service_type not in ["plan_a", "plan_b"]:
-        raise HTTPException(status_code=400, detail="此 API 僅處理方案A與方案B之訂單")
+    valid_plan_types = ["plan_a", "plan_b", "plan_ac", "plan_ad", "plan_bc", "plan_bd"]
+    if data.service_type not in valid_plan_types:
+        raise HTTPException(status_code=400, detail="此 API 僅處理方案類訂單")
 
     # 後端直接鎖定價格（不信任前端傳來的金額，安全防線）
     plan_prices = {
-        "plan_a": Decimal("8800.00"),
-        "plan_b": Decimal("12800.00")
+        "plan_a":  Decimal("15800.00"),
+        "plan_b":  Decimal("25700.00"),
+        "plan_ac": Decimal("15800.00"),
+        "plan_ad": Decimal("25700.00"),
+        "plan_bc": Decimal("10800.00"),
+        "plan_bd": Decimal("20700.00"),
     }
-    
+
+    plan_descriptions = {
+        "plan_a":  "方案A - 免費取回留念（舊版）",
+        "plan_b":  "方案B - 永久供養在蓮花勝境（舊版）",
+        "plan_ac": "方案A + 方案C - 個別火化 + 免費取回留念",
+        "plan_ad": "方案A + 方案D - 個別火化 + 永久供養蓮花勝境",
+        "plan_bc": "方案B + 方案C - 純善業泥製作 + 免費取回留念",
+        "plan_bd": "方案B + 方案D - 純善業泥製作 + 永久供養蓮花勝境",
+    }
+
     base_amount = plan_prices[data.service_type]
-    
-    # 計算折扣 (如果勾選自行火化扣 2000)
-    discount = Decimal("2000.00") if data.self_cremation else Decimal("0.00")
+
+    # 自助火化折扣：僅方案A系列（plan_a/plan_ac/plan_ad）才適用
+    is_plan_a_series = data.service_type in ["plan_a", "plan_ac", "plan_ad"]
+    discount = Decimal("2000.00") if (data.self_cremation and is_plan_a_series) else Decimal("0.00")
     final_amount = base_amount - discount
 
     order = Order(
@@ -66,7 +92,7 @@ def create_order(
         pet_id=data.pet_id,
         booking_id=data.booking_id,
         service_type=data.service_type,
-        service_description="方案A - 自行取回" if data.service_type == "plan_a" else "方案B - 永久供養在蓮花勝境",
+        service_description=plan_descriptions[data.service_type],
         amount=final_amount,
         self_cremation_discount=discount,
         note=data.notes,
